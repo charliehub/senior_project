@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Ashia
+ * @author Charles
  */
 public class Bathroom2Test {
 
@@ -61,9 +61,9 @@ public class Bathroom2Test {
         String obj = "toiletstuff";
         String obj2 = "watertoilet";
         String obj3 = "wikitoilet";
-        ImageIcon toil = new ImageIcon("toilets/" + obj + ".jpg");
-        ImageIcon toil2 = new ImageIcon("toilets/" + obj2 + ".jpg");
-        ImageIcon toil3 = new ImageIcon("toilets/" + obj3 + ".jpg");
+        ImageIcon toil = new ImageIcon("/toilets/" + obj + ".jpg");
+        ImageIcon toil2 = new ImageIcon("/toilets/" + obj2 + ".jpg");
+        ImageIcon toil3 = new ImageIcon("/toilets/" + obj3 + ".jpg");
         Bathroom2 instance = new Bathroom2();
         ImageIcon expResult = null;
         ImageIcon expResult2 = null;
@@ -87,14 +87,14 @@ public class Bathroom2Test {
         String show = "durhamshower";
         String show1 = "royalshower";
         String show2 = "clevelandshower";
-        ImageIcon toil = new ImageIcon("shower/" + show + ".jpg");
-        ImageIcon toil2 = new ImageIcon("shower/" + show1 + ".jpg");
-        ImageIcon toil3 = new ImageIcon("shower/" + show2 + ".jpg");
+        ImageIcon toil = new ImageIcon("/shower/" + show + ".jpg");
+        ImageIcon toil2 = new ImageIcon("/shower/" + show1 + ".jpg");
+        ImageIcon toil3 = new ImageIcon("/shower/" + show2 + ".jpg");
 
         Bathroom2 instance = new Bathroom2();
-        ImageIcon expResult = new ImageIcon("shower/durhamshower.jpg");
-        ImageIcon expResult2 = new ImageIcon("shower/royalshower.jpg");
-        ImageIcon expResult3 = new ImageIcon("shower/clevelandshower.jpg");
+        ImageIcon expResult = new ImageIcon("/shower/durhamshower.jpg");
+        ImageIcon expResult2 = new ImageIcon("/shower/royalshower.jpg");
+        ImageIcon expResult3 = new ImageIcon("/shower/clevelandshower.jpg");
         ImageIcon result = instance.getshower(toil);
         ImageIcon result2 = instance.getshower(toil2);
         ImageIcon result3 = instance.getshower(toil3);

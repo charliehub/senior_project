@@ -34,19 +34,19 @@ public class KitchenGrid extends JPanel {
   DTKitchen pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10,
       pic11, pic12;
    
-  ArrayList<DTKitchen> pic = new ArrayList<DTKitchen>();
+ 
   
-  static String mayaString = "akKitchen";
+  static String Kitchen1 = "old";
 
-  static String anyaString = "englandKitchen";
+  static String Kitchen2 = "modernistic";
 
-  static String laineString = "livingroomKitchen";
+  static String Kitchen3 = "stockport";
 
-  static String cosmoString = "normalcouch";
+  static String Kitchen4 = "sunrise";
 
-  static String adeleString = "redcouch";
+  static String Kitchen5 = "spanish";
 
-  static String alexiString = "yellow couch";
+  static String Kitchen6 = "remodeled";
 
   JSlider width, height, color;
   
@@ -57,29 +57,29 @@ public class KitchenGrid extends JPanel {
     picHandler = new KitchenTransferHandler();
 
     JPanel mugshots = new JPanel(new GridLayout(4, 3));
-    pic1 = new DTKitchen(createImageIcon("/couches/" + mayaString + ".jpg",
-        mayaString).getImage());
+    pic1 = new DTKitchen(createImageIcon("/kitchen/" + Kitchen1 + ".jpg",
+        Kitchen1).getImage());
     pic1.setTransferHandler(picHandler);
     mugshots.add(pic1);
-    pic2 = new DTKitchen(createImageIcon("/couches/" + anyaString + ".jpg",
-        anyaString).getImage());
+    pic2 = new DTKitchen(createImageIcon("/kitchen/" + Kitchen2 + ".jpg",
+        Kitchen2).getImage());
     pic2.setTransferHandler(picHandler);
     mugshots.add(pic2);
-    pic3 = new DTKitchen(createImageIcon("/couches/" + laineString + ".jpg",
-        laineString).getImage());
+    pic3 = new DTKitchen(createImageIcon("/kitchen/" + Kitchen3 + ".jpg",
+        Kitchen3).getImage());
     pic3.setTransferHandler(picHandler);
     mugshots.add(pic3);
     
-    pic4 = new DTKitchen(createImageIcon("/couches/" + cosmoString + ".jpg",
-        cosmoString).getImage());
+    pic4 = new DTKitchen(createImageIcon("/kitchen/" + Kitchen4 + ".jpg",
+        Kitchen4).getImage());
     pic4.setTransferHandler(picHandler);
     mugshots.add(pic4);
-    pic5 = new DTKitchen(createImageIcon("/couches/" + adeleString + ".jpg",
-        adeleString).getImage());
+    pic5 = new DTKitchen(createImageIcon("/kitchen/" + Kitchen5 + ".jpg",
+        Kitchen5).getImage());
     pic5.setTransferHandler(picHandler);
     mugshots.add(pic5);
-    pic6 = new DTKitchen(createImageIcon("/couches/" + alexiString + ".jpg",
-        alexiString).getImage());
+    pic6 = new DTKitchen(createImageIcon("/kitchen/" + Kitchen6 + ".jpg",
+        Kitchen6).getImage());
     pic6.setTransferHandler(picHandler);
     mugshots.add(pic6);
      

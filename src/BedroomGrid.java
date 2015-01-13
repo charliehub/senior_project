@@ -34,19 +34,19 @@ public class BedroomGrid extends JPanel {
   DTBedrooms pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10,
       pic11, pic12;
    
-  ArrayList<DTBedrooms> pic = new ArrayList<DTBedrooms>();
+ 
   
-  static String mayaString = "akBedrooms";
+  static String bedString1 = "blue";
 
-  static String anyaString = "englandBedrooms";
+  static String bedString2 = "dream";
 
-  static String laineString = "livingroomBedrooms";
+  static String bedString3 = "luxurious";
 
-  static String cosmoString = "normalcouch";
+  static String bedString4 = "marvel";
 
-  static String adeleString = "redcouch";
+  static String bedString5 = "secret";
 
-  static String alexiString = "yellow couch";
+  static String bedString6 = "smart";
 
   JSlider width, height, color;
   
@@ -57,29 +57,29 @@ public class BedroomGrid extends JPanel {
     picHandler = new BedroomsTransferHandler();
 
     JPanel mugshots = new JPanel(new GridLayout(4, 3));
-    pic1 = new DTBedrooms(createImageIcon("/couches/" + mayaString + ".jpg",
-        mayaString).getImage());
+    pic1 = new DTBedrooms(createImageIcon("/bedrooms/" + bedString1 + ".jpg",
+        bedString1).getImage());
     pic1.setTransferHandler(picHandler);
     mugshots.add(pic1);
-    pic2 = new DTBedrooms(createImageIcon("/couches/" + anyaString + ".jpg",
-        anyaString).getImage());
+    pic2 = new DTBedrooms(createImageIcon("/bedrooms/" + bedString2 + ".jpg",
+        bedString2).getImage());
     pic2.setTransferHandler(picHandler);
     mugshots.add(pic2);
-    pic3 = new DTBedrooms(createImageIcon("/couches/" + laineString + ".jpg",
-        laineString).getImage());
+    pic3 = new DTBedrooms(createImageIcon("/bedrooms/" + bedString3 + ".jpg",
+        bedString3).getImage());
     pic3.setTransferHandler(picHandler);
     mugshots.add(pic3);
     
-    pic4 = new DTBedrooms(createImageIcon("/couches/" + cosmoString + ".jpg",
-        cosmoString).getImage());
+    pic4 = new DTBedrooms(createImageIcon("/bedrooms/" + bedString4 + ".jpg",
+        bedString4).getImage());
     pic4.setTransferHandler(picHandler);
     mugshots.add(pic4);
-    pic5 = new DTBedrooms(createImageIcon("/couches/" + adeleString + ".jpg",
-        adeleString).getImage());
+    pic5 = new DTBedrooms(createImageIcon("/bedrooms/" + bedString5 + ".jpg",
+        bedString5).getImage());
     pic5.setTransferHandler(picHandler);
     mugshots.add(pic5);
-    pic6 = new DTBedrooms(createImageIcon("/couches/" + alexiString + ".jpg",
-        alexiString).getImage());
+    pic6 = new DTBedrooms(createImageIcon("/bedrooms/" + bedString6 + ".jpg",
+       bedString6).getImage());
     pic6.setTransferHandler(picHandler);
     mugshots.add(pic6);
      
@@ -154,7 +154,7 @@ public class BedroomGrid extends JPanel {
 }
 
 /*
- * BedroomsTransferHandler.java is used by the 1.4 Bedrooms.java example.
+ * BedroomsTransferHandler.java is used by  Bedrooms.java.
  */
 
 class BedroomsTransferHandler extends TransferHandler {
@@ -239,7 +239,7 @@ class BedroomsTransferHandler extends TransferHandler {
 }
 
 /*
- * DTBedrooms.java is used by the 1.4 Bedrooms.java example.
+ * DTBedrooms.java is used by   Bedrooms.java 
  */
 
 //A subclass of Bedrooms that supports Data Transfer.
@@ -258,10 +258,7 @@ class DTBedrooms extends Bedrooms implements MouseMotionListener {
     //menu accelerators that cause these actions to be invoked.
     //Bedrooms does not use menu accelerators and, since
     //the default value of installInputMapBindings is true,
-    //the bindings are installed. Bedrooms2 does use
-    //menu accelerators and so calls setInstallInputMapBindings
-    //with a value of false. Your program would do one or the
-    //other, but not both.
+    //the bindings are installed.
     if (installInputMapBindings) {
       InputMap imap = this.getInputMap();
       imap.put(KeyStroke.getKeyStroke("ctrl X"), TransferHandler
@@ -333,13 +330,10 @@ class DTBedrooms extends Bedrooms implements MouseMotionListener {
   public void mouseMoved(MouseEvent e) {
   }
 
-  //This method is necessary because Bedrooms and
-  //Bedrooms2 both use this class and Bedrooms
+  //This method is necessary because Bedrooms 
+  // uses this class and Bedrooms
   //needs to have the input map bindings installed for
-  //cut/copy/paste. Bedrooms2 uses menu accelerators
-  //and does not need to have the input map bindings installed.
-  //Your program would use one approach or the other, but not
-  //both. The default for installInputMapBindings is true.
+  //cut/copy/paste. The default for installInputMapBindings is true.
   public static void setInstallInputMapBindings(boolean flag) {
     installInputMapBindings = flag;
   }
@@ -350,8 +344,8 @@ class DTBedrooms extends Bedrooms implements MouseMotionListener {
 }
 
 /*
- * Bedrooms.java is used by the 1.4 TrackFocusDemo.java and Bedrooms.java
- * examples.
+ * Bedrooms.java is used by Bedrooms.java
+ * 
  */
 
 class Bedrooms extends JComponent implements MouseListener, FocusListener,

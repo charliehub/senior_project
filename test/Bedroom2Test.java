@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Ashia
+ * @author Charles
  */
 public class Bedroom2Test {
 
@@ -116,8 +116,8 @@ public class Bedroom2Test {
         ImageIcon result2 = instance.getmirror(reflect2);
         ImageIcon result3 = instance.getmirror(reflect3);
         assertEquals("acquiring mirror: ", expResult, result);
-         assertEquals("acquiring mirror: ", expResult2, result2);
-          assertEquals("acquiring mirror: ", expResult3, result3);
+        assertEquals("acquiring mirror: ", expResult2, result2);
+        assertEquals("acquiring mirror: ", expResult3, result3);
         // TODO review the generated test code and remove the default call to fail.
         
     }

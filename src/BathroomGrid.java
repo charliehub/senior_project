@@ -34,19 +34,19 @@ public class BathroomGrid extends JPanel {
   DTBathrooms pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10,
       pic11, pic12;
    
-  ArrayList<DTBathrooms> pic = new ArrayList<DTBathrooms>();
+ 
   
-  static String mayaString = "akBathrooms";
+  static String Bath1 = "antique";
 
-  static String anyaString = "englandBathrooms";
+  static String Bath2 = "simple";
 
-  static String laineString = "livingroomBathrooms";
+  static String Bath3 = "exotic";
 
-  static String cosmoString = "normalcouch";
+  static String Bath4 = "architecture";
 
-  static String adeleString = "redcouch";
+  static String Bath5 = "valentine";
 
-  static String alexiString = "yellow couch";
+  static String Bath6 = "squeeze";
 
   JSlider width, height, color;
   
@@ -57,29 +57,29 @@ public class BathroomGrid extends JPanel {
     picHandler = new BathroomsTransferHandler();
 
     JPanel mugshots = new JPanel(new GridLayout(4, 3));
-    pic1 = new DTBathrooms(createImageIcon("/couches/" + mayaString + ".jpg",
-        mayaString).getImage());
+    pic1 = new DTBathrooms(createImageIcon("/bathrooms/" + Bath1 + ".jpg",
+        Bath1).getImage());
     pic1.setTransferHandler(picHandler);
     mugshots.add(pic1);
-    pic2 = new DTBathrooms(createImageIcon("/couches/" + anyaString + ".jpg",
-        anyaString).getImage());
+    pic2 = new DTBathrooms(createImageIcon("/bathrooms/" + Bath2 + ".jpg",
+        Bath2).getImage());
     pic2.setTransferHandler(picHandler);
     mugshots.add(pic2);
-    pic3 = new DTBathrooms(createImageIcon("/couches/" + laineString + ".jpg",
-        laineString).getImage());
+    pic3 = new DTBathrooms(createImageIcon("/bathrooms/" + Bath3 + ".jpg",
+        Bath3).getImage());
     pic3.setTransferHandler(picHandler);
     mugshots.add(pic3);
     
-    pic4 = new DTBathrooms(createImageIcon("/couches/" + cosmoString + ".jpg",
-        cosmoString).getImage());
+    pic4 = new DTBathrooms(createImageIcon("/bathrooms/" + Bath4 + ".jpg",
+        Bath4).getImage());
     pic4.setTransferHandler(picHandler);
     mugshots.add(pic4);
-    pic5 = new DTBathrooms(createImageIcon("/couches/" + adeleString + ".jpg",
-        adeleString).getImage());
+    pic5 = new DTBathrooms(createImageIcon("/bathrooms/" + Bath5 + ".jpg",
+        Bath5).getImage());
     pic5.setTransferHandler(picHandler);
     mugshots.add(pic5);
-    pic6 = new DTBathrooms(createImageIcon("/couches/" + alexiString + ".jpg",
-        alexiString).getImage());
+    pic6 = new DTBathrooms(createImageIcon("/bathrooms/" + Bath6 + ".jpg",
+        Bath6).getImage());
     pic6.setTransferHandler(picHandler);
     mugshots.add(pic6);
      
@@ -154,7 +154,7 @@ public class BathroomGrid extends JPanel {
 }
 
 /*
- * BathroomsTransferHandler.java is used by the 1.4 Bathrooms.java example.
+ * BathroomsTransferHandler.java is used by Bathrooms.java 
  */
 
 class BathroomsTransferHandler extends TransferHandler {
@@ -239,7 +239,7 @@ class BathroomsTransferHandler extends TransferHandler {
 }
 
 /*
- * DTBathrooms.java is used by the 1.4 Bathrooms.java example.
+ * DTBathrooms.java is used by Bathrooms.java 
  */
 
 //A subclass of Bathrooms that supports Data Transfer.
@@ -258,10 +258,7 @@ class DTBathrooms extends Bathrooms implements MouseMotionListener {
     //menu accelerators that cause these actions to be invoked.
     //Bathrooms does not use menu accelerators and, since
     //the default value of installInputMapBindings is true,
-    //the bindings are installed. Bathrooms2 does use
-    //menu accelerators and so calls setInstallInputMapBindings
-    //with a value of false. Your program would do one or the
-    //other, but not both.
+    //the bindings are installed. 
     if (installInputMapBindings) {
       InputMap imap = this.getInputMap();
       imap.put(KeyStroke.getKeyStroke("ctrl X"), TransferHandler
@@ -333,13 +330,10 @@ class DTBathrooms extends Bathrooms implements MouseMotionListener {
   public void mouseMoved(MouseEvent e) {
   }
 
-  //This method is necessary because Bathrooms and
-  //Bathrooms2 both use this class and Bathrooms
+  //This method is necessary because Bathrooms 
+  // uses this class and Bathrooms
   //needs to have the input map bindings installed for
-  //cut/copy/paste. Bathrooms2 uses menu accelerators
-  //and does not need to have the input map bindings installed.
-  //Your program would use one approach or the other, but not
-  //both. The default for installInputMapBindings is true.
+  //cut/copy/paste.  The default for installInputMapBindings is true.
   public static void setInstallInputMapBindings(boolean flag) {
     installInputMapBindings = flag;
   }
@@ -350,10 +344,10 @@ class DTBathrooms extends Bathrooms implements MouseMotionListener {
 }
 
 /*
- * Bathrooms.java is used by the 1.4 TrackFocusDemo.java and Bathrooms.java
- * examples.
+ * Bathrooms.java 
  */
 
+ //Class for the establishment of the images
 class Bathrooms extends JComponent implements MouseListener, FocusListener,
     Accessible {
   Image image;
@@ -395,6 +389,7 @@ class Bathrooms extends JComponent implements MouseListener, FocusListener,
     this.repaint();
   }
 
+  //gives the borders for the images that are being drawn.
   protected void paintComponent(Graphics graphics) {
     Graphics g = graphics.create();
 

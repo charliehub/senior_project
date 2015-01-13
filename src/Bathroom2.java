@@ -7,9 +7,14 @@ public class Bathroom2 extends Room2 {
     public ImageIcon toilet;
     public ImageIcon shower;
     public ImageIcon faucet;
+    public String name;
 
     public Bathroom2(){
         
+    }
+    
+    public Bathroom2(ImageIcon toile){
+        toile=shower;
     }
     public Bathroom2(Image roomtype, ImageIcon sitting, ImageIcon decoration,
             ImageIcon barrier, ImageIcon tex, ImageIcon toilet, ImageIcon shower, ImageIcon faucet) {
@@ -21,7 +26,8 @@ public class Bathroom2 extends Room2 {
     }
 
     public ImageIcon gettoilet(ImageIcon toil) {
-
+       
+      
         return toilet;
     }
 
@@ -32,6 +38,7 @@ public class Bathroom2 extends Room2 {
     }
 
     public ImageIcon getshower(ImageIcon shower) {
+       
         return shower;
     }
 

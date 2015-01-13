@@ -14,6 +14,7 @@ public class Room2 extends JComponent implements MouseListener,
         FocusListener, Accessible{
 
     public Image type;
+    public ImageIcon room;
     public ImageIcon furniture;
     public ImageIcon decor;
     public ImageIcon walls;
@@ -21,6 +22,10 @@ public class Room2 extends JComponent implements MouseListener,
 
     public Room2(){
     
+    }
+    
+    public Room2(ImageIcon room){
+        this.room = room;
     }
     
     public Room2(Image roomtype){
@@ -39,19 +44,20 @@ public class Room2 extends JComponent implements MouseListener,
 			   tex = textures;
 }
 
-    public Image getRoom(Image curroom) {
-
-        return type;
+    public ImageIcon getRoom(ImageIcon curroom) {
+        
+        curroom = room;
+        return room;
 
     }
 
-    public Image deleteRoom(Image curroom) {
+    public ImageIcon deleteRoom(ImageIcon curroom) {
 
-        type = null;
-        return type;
+        room = null;
+        return room;
     }
 
-    public Image RoomChange(Image curroom, Image roomdes){
+    public ImageIcon RoomChange(ImageIcon curroom, ImageIcon roomdes){
         curroom = roomdes;
         return roomdes;
     }

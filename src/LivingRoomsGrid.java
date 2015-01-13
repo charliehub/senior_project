@@ -35,19 +35,19 @@ public class LivingRoomsGrid extends JPanel {
   DTLivingRooms pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10,
       pic11, pic12;
    
-  ArrayList<DTLivingRooms> pic = new ArrayList<DTLivingRooms>();
+
   
-  static String mayaString = "akLivingRooms";
+  static String Living1 = "decorative";
 
-  static String anyaString = "englandLivingRooms";
+  static String Living2 = "fantastic";
 
-  static String laineString = "livingroomLivingRooms";
+  static String Living3 = "interior";
 
-  static String cosmoString = "normalcouch";
+  static String Living4 = "luxurious";
 
-  static String adeleString = "redcouch";
+  static String Living5 = "minimalist";
 
-  static String alexiString = "yellow couch";
+  static String Living6 = "pompy";
 
   JSlider width, height, color;
   
@@ -58,29 +58,29 @@ public class LivingRoomsGrid extends JPanel {
     picHandler = new LivingRoomsTransferHandler();
 
     JPanel mugshots = new JPanel(new GridLayout(4, 3));
-    pic1 = new DTLivingRooms(createImageIcon("/couches/" + mayaString + ".jpg",
-        mayaString).getImage());
+    pic1 = new DTLivingRooms(createImageIcon("/livingrooms/" + Living1 + ".jpg",
+        Living1).getImage());
     pic1.setTransferHandler(picHandler);
     mugshots.add(pic1);
-    pic2 = new DTLivingRooms(createImageIcon("/couches/" + anyaString + ".jpg",
-        anyaString).getImage());
+    pic2 = new DTLivingRooms(createImageIcon("/livingrooms/" + Living2 + ".jpg",
+        Living2).getImage());
     pic2.setTransferHandler(picHandler);
     mugshots.add(pic2);
-    pic3 = new DTLivingRooms(createImageIcon("/couches/" + laineString + ".jpg",
-        laineString).getImage());
+    pic3 = new DTLivingRooms(createImageIcon("/livingrooms/" + Living3 + ".jpg",
+        Living3).getImage());
     pic3.setTransferHandler(picHandler);
     mugshots.add(pic3);
     
-    pic4 = new DTLivingRooms(createImageIcon("/couches/" + cosmoString + ".jpg",
-        cosmoString).getImage());
+    pic4 = new DTLivingRooms(createImageIcon("/livingrooms/" + Living4 + ".jpg",
+        Living4).getImage());
     pic4.setTransferHandler(picHandler);
     mugshots.add(pic4);
-    pic5 = new DTLivingRooms(createImageIcon("/couches/" + adeleString + ".jpg",
-        adeleString).getImage());
+    pic5 = new DTLivingRooms(createImageIcon("/livingrooms/" + Living5 + ".jpg",
+        Living5).getImage());
     pic5.setTransferHandler(picHandler);
     mugshots.add(pic5);
-    pic6 = new DTLivingRooms(createImageIcon("/couches/" + alexiString + ".jpg",
-        alexiString).getImage());
+    pic6 = new DTLivingRooms(createImageIcon("/livingrooms/" + Living6 + ".jpg",
+        Living6).getImage());
     pic6.setTransferHandler(picHandler);
     mugshots.add(pic6);
      
